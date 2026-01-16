@@ -1,9 +1,12 @@
 /* CSS Variables Area */
 :root {
-    --bg: #f8fafc;
+    --bg: #fdfcfb;
     --card: #ffffff;
-    --primary: #3b82f6;
-    --text: #1e293b;
+    --primary: #9a3412;
+    --text: #431407;
+    --label: #c2410c;
+    --border: #f3f4f6;
+    --button: #ea580c;
 }
 
 * {
@@ -25,11 +28,88 @@ body {
 
 .container {
     background: var(--card);
-    padding: 2rem;
+    padding: 5rem;
     border-radius: 1rem;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
     text-align: center;
-    width: 320px;
+    width: 450px;
 }
 
 /* TASK: Add styles for .score-board, .choices, .choice-btn, #message, and .reset-btn below! */
+/*use dot for class selectors and dash for IDs*/
+
+.score-board {
+    display: flex;
+    justify-content: space-around;
+    background: var(--bg);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.score-item {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}
+
+.label {
+font-size:larger;
+color: var(--label);
+
+}
+
+.value {
+    font-size: 1.5rem;
+}
+
+.choices {
+    display:flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.choice-btn {
+    font-size: 2rem;
+    width: 70px;
+    height: 70px;
+    border: 2px solid var(--bg);
+    border-radius: 1rem;
+    background: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.choice-btn:hover {
+    border-color: var(--label);
+    transform: scale (1.1);
+    
+}
+
+#message {
+    font-weight: bolder;
+    margin-bottom: 1rem;
+    min-height: 1.5rem;
+}
+
+.win {
+    color: #22c55e;
+}
+
+.lose {
+    color: #ef4444;
+}
+
+.reset-btn {
+    background: none;
+    border: none;
+    color: var(--button);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.reset-btn:hover {
+    color: var(--label);
+}
